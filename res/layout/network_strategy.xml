@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    android:padding="8dip"
+    android:orientation="vertical" >
+
+    <TableRow
+        android:id="@+id/upload_download_row"
+        android:layout_width="match_parent"
+        android:layout_height="36dip"
+       	android:baselineAligned="true"
+        android:paddingTop="4dip"
+        android:weightSum="3" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="36dip"
+            android:layout_weight="2"
+            android:text="@string/upload_download"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white" />
+
+        <ToggleButton
+            android:id="@+id/wifi_toggleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="36dip"
+            android:layout_weight="1"
+             android:textColor="@android:color/white"
+            android:textOff="@string/download"
+            android:textOn="@string/upload" 
+            android:onClick="onToggleClicked"/>
+    </TableRow>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="4dip"
+        android:background="@android:color/white" />
+
+    <TableRow
+        android:id="@+id/auto_wifi_row1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:padding="4dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/based_on_time"
+            android:layout_weight="0.3"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white" />
+
+        <EditText
+            android:id="@+id/time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:hint="@string/mins"
+            android:inputType="numberDecimal"
+            android:textColorHint="@android:color/white" >
+        </EditText>
+
+        <Button
+            android:id="@+id/button1"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+             android:textColor="@android:color/white"
+            android:text="@string/add" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/auto_wifi_row2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:padding="4dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/based_on_scan"
+            android:layout_weight="0.3"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white" />
+
+        <EditText
+            android:id="@+id/scan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:hint="@string/scans"
+            android:inputType="numberDecimal"
+            android:textColorHint="@android:color/white" >
+        </EditText>
+
+        <Button
+            android:id="@+id/button2"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+             android:textColor="@android:color/white"
+            android:text="@string/add" />
+    </TableRow> 
+
+<RadioGroup
+    android:id="@+id/wifi_radioGroup1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <RadioButton
+        android:id="@+id/radio0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/auto_switch_wifi"
+        android:textColor="@android:color/white" />
+
+    <RadioButton
+        android:id="@+id/radio1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:textColor="@android:color/white"
+        android:text="@string/keep_wifi_on" />
+</RadioGroup>
+<View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/layout_network_strategy_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="@string/title_sleep_preference" >
+        <EditTextPreference
+            android:key="sleep_interval_preference"
+            android:summary="@string/summary_sleep_interval"
+            android:title="@string/title_sleep_interval" 
+            android:defaultValue="10"
+            />
+        <EditTextPreference
+            android:key="sleep_duration_preference"
+            android:summary="@string/summary_sleep_duration"
+            android:title="@string/title_sleep_duration" 
+            android:defaultValue="10"
+            />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/title_sleep_preference" >
+        <EditTextPreference
+            android:key="screen_dim_80"
+            android:summary="@string/summary_time_at_80"
+            android:title="@string/title_time_at_80" 
+            android:defaultValue="1"
+            />
+        <EditTextPreference
+            android:key="screen_dim_0"
+            android:summary="@string/summary_time_at_0"
+            android:title="@string/title_time_at_0" 
+            android:defaultValue="2"
+            />
+    </PreferenceCategory>
+
+</PreferenceScreen>
